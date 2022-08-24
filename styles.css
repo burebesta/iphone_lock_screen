@@ -1,0 +1,158 @@
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(243, 243, 243);
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    width: 390px;
+    height: 844px;
+    background-image: url(./assets/wallpaper.png);
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top-area {
+    width: 100%;
+}
+
+.top-screen {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 20px;
+}
+
+.clock-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.lock-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.lock-buttons > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(1,1,1,0.4);
+    border: 1px solid rgba(177, 168, 168, 0.2);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.lock-buttons > div:hover{
+    cursor: pointer;
+    background-color: rgba(1,1,1,0.6);
+}
+
+#hidden {
+    visibility: hidden;
+}
+
+.pass-dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pass-dots > div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+   
+    border: 2px solid rgb(82, 81, 81);
+}
+
+.bottom-area {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px 30px;
+}
+
+.bottom-area > i {
+    background-color: rgba(30, 34, 68, 0.9);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.visibility-false {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 1.5s linear;
+
+}
+
+.visibility-true{
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+}
+
+.dot-active {
+    background-color: rgb(28, 37, 85);
+}
+
+.ban {
+    height: 70px;
+    text-align: center;
+}
+
+.ban-container {
+    height: 50px;
+    display: flex;
+    align-content: center;
+}
+
+.bottom-area > i:hover {
+    cursor: pointer;
+}
+
+.date {
+    margin-top: 10px;
+}
+
+.hour {
+    font-size: 4rem;
+}
+
+.lock {
+    font-size: 2rem;
+}
+
+.enter-password {
+    margin-top: 10px;
+}
