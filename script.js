@@ -1,4 +1,4 @@
-
+console.log('Password is 1234')
 const password = '1234'
 let tempPassword = ''
 let passwordTries = 0
