@@ -19,10 +19,8 @@ hourElement.innerHTML=`${hour} : ${minute.toString().length == 2 ? minute : `0${
 dateElement.innerHTML=`${dayOfWeek}, ${day} ${month}`
 
 numbers.forEach(number=> number.addEventListener('click', (e)=>{
-        console.log(passwordTries)
         if(tempPassword.length<4 && !lockedStatus){
             tempPassword+=e.target.innerHTML
-            console.log(`the temporary pass is ${tempPassword}`)
             updateDots()
         }
         if (tempPassword.length==4){
@@ -85,7 +83,6 @@ function addShake() {
 deleteButton.addEventListener('click', ()=>{
     if(!lockedStatus){
         tempPassword = tempPassword.slice(0,-1)
-        console.log(tempPassword)
         updateDots()
     }
 })
