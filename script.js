@@ -75,6 +75,7 @@ function clearPassword() {
 
 function addShake() {
     lockClosed.classList.add('fa-shake')
+    clearPassword()
     setTimeout(() => {
         lockClosed.classList.remove('fa-shake')    
     }, 1000);
