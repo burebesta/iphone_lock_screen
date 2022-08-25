@@ -15,7 +15,7 @@ const numbers = document.querySelectorAll('.password-number')
 const enterPassword = document.querySelector('.enter-password')
 const hourElement = document.querySelector('.hour')
 const dateElement = document.querySelector('.date')
-hourElement.innerHTML=`${hour} : ${minute}`
+hourElement.innerHTML=`${hour} : ${minute.toString().length == 2 ? minute : `0${minute}`}`
 dateElement.innerHTML=`${dayOfWeek}, ${day} ${month}`
 
 numbers.forEach(number=> number.addEventListener('click', (e)=>{
