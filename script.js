@@ -111,7 +111,36 @@ function openLock() {
     lockOpen.classList.remove('visibility-false')
     lockClosed.classList.add('visibility-false')
     lockClosed.classList.remove('visibility-true')
+    setTimeout(openPhone, 1000)
+}
+body = document.querySelector('body')
+function openPhone() {
+    container.classList.add('hidden')
+    const container2 = document.createElement('div')
+    container2.classList.add('container')
+    container2.classList.add('hidden')
+    appendContainer()
+    function appendContainer(){
+        container.classList.add('none')
+        body.appendChild(container2)
+        container2.classList.remove('hidden')  
+        container2.innerHTML=`
+        <div class="top-area">
+            <div class="top-screen">
+                <span>Orange</span>
+                <div>
+                    <i class="fa-solid fa-signal"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-battery-full"></i>
+                </div>
+            </div>
+            <div class='menu'>
+                <div class='menu-icon'><a href='https://github.com/decebrolus' target='_blank'><i class="fa-brands fa-github"></i></a></div>
+                <div class='menu-icon'><a href='https://www.linkedin.com/in/calin-oglinda-990524240/' target='_blank'><i class="fa-brands fa-linkedin"></i></a></div>
+            </div>
+        </div>
+        `  
+    }
 }
 
-
-
+const container = document.querySelector('.container')

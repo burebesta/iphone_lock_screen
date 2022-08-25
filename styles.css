@@ -75,6 +75,18 @@ body {
     visibility: hidden;
 }
 
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transform: translateZ(-1000px) scale(0.1);
+}
+
+
+.none {
+    display: none;
+}
+
 .pass-dots {
     display: flex;
     gap: 10px;
@@ -156,3 +168,31 @@ body {
 .enter-password {
     margin-top: 10px;
 }
+
+.menu-icon {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(1, 1, 10, 0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+}
+
+.menu-icon:hover{
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 40px;
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+  }
